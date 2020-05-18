@@ -1,7 +1,7 @@
 module ActivityNotification
   # Controller to manage Swagger API references.
   # @See https://github.com/fotinakis/swagger-blocks/blob/master/spec/lib/swagger_v3_blocks_spec.rb
-  class APIdocsController < ActivityNotification.config.parent_controller.constantize
+  class APIDocsController < ActivityNotification.config.parent_controller.constantize
     include ::Swagger::Blocks
 
     swagger_root do
@@ -67,7 +67,7 @@ module ActivityNotification
     ].freeze
   
     # Returns root JSON of Swagger API references.
-    # GET /apidocs
+    # GET /api_docs
     def index
       render json: ::Swagger::Blocks.build_root_json(SWAGGERED_CLASSES)
     end

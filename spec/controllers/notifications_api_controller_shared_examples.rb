@@ -444,9 +444,9 @@ shared_examples_for :notifications_api_request do
     group_owner.open!
   end
 
-  describe "GET /apidocs" do
+  describe "GET /api_docs" do
     it "returns API references as OpenAPI Specification JSON schema" do
-      get "#{root_path}/apidocs"
+      get "#{root_path}/api_docs"
       write_schema_file(response.body)
       expect(read_schema_file["openapi"]).to eq("3.0.0")
     end

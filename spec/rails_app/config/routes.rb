@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     scope :"v#{ActivityNotification::GEM_VERSION::MAJOR}" do
       notify_to :users, api_mode: true, with_subscription: true
       notify_to :users, api_mode: true, with_devise: :users, devise_default_routes: true, with_subscription: true
-      resources :apidocs, only: [:index], controller: 'activity_notification/apidocs'
+      resources :api_docs, only: [:index], controller: 'activity_notification/api_docs'
       resources :users, only: [:index, :show]
     end
   end
