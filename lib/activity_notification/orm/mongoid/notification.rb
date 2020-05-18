@@ -13,7 +13,7 @@ module ActivityNotification
         include Common
         include Renderable
         include Association
-        include NotificationApi
+        include NotificationAPI
         store_in collection: ActivityNotification.config.notification_table_name
 
         # Belongs to target instance of this notification as polymorphic association.
@@ -187,7 +187,7 @@ module ActivityNotification
         scope :reload,                            -> { }
 
         # Returns if the notification is group owner.
-        # Calls NotificationApi#group_owner? as super method.
+        # Calls NotificationAPI#group_owner? as super method.
         # @return [Boolean] If the notification is group owner
         def group_owner?
           super

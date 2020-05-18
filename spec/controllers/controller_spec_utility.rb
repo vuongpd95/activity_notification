@@ -42,7 +42,7 @@ module ActivityNotification
       end
     end
 
-    module ApiResponseUtility
+    module APIResponseUtility
       def response_json
         JSON.parse(response.body)
       end

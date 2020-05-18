@@ -10,7 +10,7 @@ module ActivityNotification
         include ::Mongoid::Timestamps
         include ::Mongoid::Attributes::Dynamic
         include Association
-        include SubscriptionApi
+        include SubscriptionAPI
         store_in collection: ActivityNotification.config.subscription_table_name
 
         # Belongs to target instance of this subscription as polymorphic association.

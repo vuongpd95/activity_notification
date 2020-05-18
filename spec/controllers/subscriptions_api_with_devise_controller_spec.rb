@@ -1,6 +1,6 @@
 require 'controllers/subscriptions_api_controller_shared_examples'
 
-context "ActivityNotification::NotificationsApiWithDeviseController" do
+context "ActivityNotification::NotificationsAPIWithDeviseController" do
   context "test admins API with associated users authentication" do
 
     describe "/api/v#{ActivityNotification::GEM_VERSION::MAJOR}", type: :request do

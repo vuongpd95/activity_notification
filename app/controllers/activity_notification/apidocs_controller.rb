@@ -1,7 +1,7 @@
 module ActivityNotification
   # Controller to manage Swagger API references.
   # @See https://github.com/fotinakis/swagger-blocks/blob/master/spec/lib/swagger_v3_blocks_spec.rb
-  class ApidocsController < ActivityNotification.config.parent_controller.constantize
+  class APIdocsController < ActivityNotification.config.parent_controller.constantize
     include ::Swagger::Blocks
 
     swagger_root do
@@ -60,9 +60,9 @@ module ActivityNotification
   
     SWAGGERED_CLASSES = [
       Notification,
-      NotificationsApiController,
+      NotificationsAPIController,
       Subscription,
-      SubscriptionsApiController,
+      SubscriptionsAPIController,
       self
     ].freeze
   

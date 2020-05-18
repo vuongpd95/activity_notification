@@ -1,6 +1,6 @@
 module ActivityNotification
   # Defines API for notification included in Notification model.
-  module NotificationApi
+  module NotificationAPI
     extend ActiveSupport::Concern
 
     included do

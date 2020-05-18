@@ -262,8 +262,8 @@ module ActivityNotification
 
 
     # Generates notifications to configured targets with notifiable model.
-    # This method calls NotificationApi#notify internally with self notifiable instance.
-    # @see NotificationApi#notify
+    # This method calls NotificationAPI#notify internally with self notifiable instance.
+    # @see NotificationAPI#notify
     #
     # @param [Symbol, String, Class] target_type Type of target
     # @param [Hash] options Options for notifications
@@ -282,8 +282,8 @@ module ActivityNotification
     end
 
     # Generates notifications to configured targets with notifiable model later by ActiveJob queue.
-    # This method calls NotificationApi#notify_later internally with self notifiable instance.
-    # @see NotificationApi#notify_later
+    # This method calls NotificationAPI#notify_later internally with self notifiable instance.
+    # @see NotificationAPI#notify_later
     #
     # @param [Symbol, String, Class] target_type Type of target
     # @param [Hash] options Options for notifications
@@ -303,8 +303,8 @@ module ActivityNotification
     alias_method :notify_now, :notify
 
     # Generates notifications to one target.
-    # This method calls NotificationApi#notify_all internally with self notifiable instance.
-    # @see NotificationApi#notify_all
+    # This method calls NotificationAPI#notify_all internally with self notifiable instance.
+    # @see NotificationAPI#notify_all
     #
     # @param [Array<Object>] targets Targets to send notifications
     # @param [Hash] options Options for notifications
@@ -324,8 +324,8 @@ module ActivityNotification
     alias_method :notify_all_now, :notify_all
 
     # Generates notifications to one target later by ActiveJob queue.
-    # This method calls NotificationApi#notify_all_later internally with self notifiable instance.
-    # @see NotificationApi#notify_all_later
+    # This method calls NotificationAPI#notify_all_later internally with self notifiable instance.
+    # @see NotificationAPI#notify_all_later
     #
     # @param [Array<Object>] targets Targets to send notifications
     # @param [Hash] options Options for notifications
@@ -344,8 +344,8 @@ module ActivityNotification
     end
 
     # Generates notifications to one target.
-    # This method calls NotificationApi#notify_to internally with self notifiable instance.
-    # @see NotificationApi#notify_to
+    # This method calls NotificationAPI#notify_to internally with self notifiable instance.
+    # @see NotificationAPI#notify_to
     #
     # @param [Object] target Target to send notifications
     # @param [Hash] options Options for notifications
@@ -365,8 +365,8 @@ module ActivityNotification
     alias_method :notify_now_to, :notify_to
 
     # Generates notifications to one target later by ActiveJob queue.
-    # This method calls NotificationApi#notify_later_to internally with self notifiable instance.
-    # @see NotificationApi#notify_later_to
+    # This method calls NotificationAPI#notify_later_to internally with self notifiable instance.
+    # @see NotificationAPI#notify_later_to
     #
     # @param [Object] target Target to send notifications
     # @param [Hash] options Options for notifications

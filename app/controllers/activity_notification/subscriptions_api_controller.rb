@@ -1,10 +1,10 @@
 module ActivityNotification
   # Controller to manage subscriptions API.
-  class SubscriptionsApiController < SubscriptionsController
+  class SubscriptionsAPIController < SubscriptionsController
     # Include Swagger API reference
-    include Swagger::SubscriptionsApi
-    # Include CommonApiController to select target and define common methods
-    include CommonApiController
+    include Swagger::SubscriptionsAPI
+    # Include CommonAPIController to select target and define common methods
+    include CommonAPIController
     protect_from_forgery except: [:create]
     before_action :set_subscription, except: [:index, :create, :find, :optional_target_names]
     before_action ->{ validate_param(:key) }, only: [:find, :optional_target_names]

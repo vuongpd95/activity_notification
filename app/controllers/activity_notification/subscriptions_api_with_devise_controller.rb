@@ -1,6 +1,6 @@
 module ActivityNotification
   # Controller to manage subscriptions API with Devise authentication.
-  class SubscriptionsApiWithDeviseController < SubscriptionsApiController
+  class SubscriptionsAPIWithDeviseController < SubscriptionsAPIController
     include DeviseTokenAuth::Concerns::SetUserByToken if defined?(DeviseTokenAuth)
     include DeviseAuthenticationController
   end

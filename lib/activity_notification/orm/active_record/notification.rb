@@ -7,7 +7,7 @@ module ActivityNotification
       class Notification < ::ActiveRecord::Base
         include Common
         include Renderable
-        include NotificationApi
+        include NotificationAPI
         self.table_name = ActivityNotification.config.notification_table_name
 
         # Belongs to target instance of this notification as polymorphic association.

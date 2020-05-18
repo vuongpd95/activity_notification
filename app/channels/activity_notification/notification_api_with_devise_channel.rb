@@ -1,6 +1,6 @@
 if defined?(ActionCable)
   # Action Cable API channel to subscribe broadcasted notifications with Devise authentication.
-  class ActivityNotification::NotificationApiWithDeviseChannel < ActivityNotification::NotificationApiChannel
+  class ActivityNotification::NotificationAPIWithDeviseChannel < ActivityNotification::NotificationAPIChannel
     # Include PolymorphicHelpers to resolve string extentions
     include ActivityNotification::PolymorphicHelpers
 

@@ -2,7 +2,7 @@ require_relative 'controller_spec_utility'
 
 shared_examples_for :subscriptions_api_controller do
   include ActivityNotification::ControllerSpec::RequestUtility
-  include ActivityNotification::ControllerSpec::ApiResponseUtility
+  include ActivityNotification::ControllerSpec::APIResponseUtility
 
   let(:target_params) { { target_type: target_type }.merge(extra_params || {}) }
 

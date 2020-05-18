@@ -13,7 +13,7 @@ module ActivityNotification
         include Common
         include Renderable
         include Association
-        include NotificationApi
+        include NotificationAPI
 
         table name: ActivityNotification.config.notification_table_name, key: :id
 
@@ -108,7 +108,7 @@ module ActivityNotification
         end
 
         # Returns if the notification is group owner.
-        # Calls NotificationApi#group_owner? as super method.
+        # Calls NotificationAPI#group_owner? as super method.
         # @return [Boolean] If the notification is group owner
         def group_owner?
           super

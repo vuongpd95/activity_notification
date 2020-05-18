@@ -1,6 +1,6 @@
 module ActivityNotification
   # Module included in api controllers to select target
-  module CommonApiController
+  module CommonAPIController
     extend ActiveSupport::Concern
 
     included do
