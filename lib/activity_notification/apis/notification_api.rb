@@ -495,7 +495,7 @@ module ActivityNotification
         parameters.merge!(notifiable.notification_parameters(target_type, key))
         group_owner = valid_group_owner(target, notifiable, key, group, group_expiry_delay)
 
-        notification = new(app_notification_attributes.merge!{
+        notification = new(app_notification_attributes.merge!({
           target: target,
           notifiable: notifiable,
           key: key,
