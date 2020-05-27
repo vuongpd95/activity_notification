@@ -503,7 +503,7 @@ module ActivityNotification
           parameters: parameters,
           notifier: notifier,
           group_owner: group_owner
-        })
+        }))
         notification.prepare_to_store.save
         notification
       end
