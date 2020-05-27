@@ -481,15 +481,10 @@ module ActivityNotification
           group_owner_notifications.earliest
       end
 
-      def app_declared_attributes
-        return [] unless respond_to?(:notification_extra_attributes)
-        notification_extra_attributes
-      end
-
       # Stores notifications to datastore
       # @api private
       def store_notification(target, notifiable, key, options = {})
-        app_notification_attributes = options.slice(*app_declared_attributes)
+        app_notification_attributes = options.slice(*ActivityNotification.config.extra_notification_attributes)
         options.except!(*app_notification_attributes.keys)
         target_type        = target.to_class_name
         group              = options[:group]              || notifiable.notification_group(target_type, key)

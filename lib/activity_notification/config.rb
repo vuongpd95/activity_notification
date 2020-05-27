@@ -201,6 +201,9 @@ module ActivityNotification
     #   @return [String] Notification API channel prefix for ActionCable.
     attr_accessor :notification_api_channel_prefix
 
+    # Let app declare additional notification attributes
+    attr_accessor :extra_notification_attributes
+
     # Initialize configuration for ActivityNotification.
     # These configuration can be overridden in initializer.
     # @return [Config] A new instance of Config
@@ -228,6 +231,7 @@ module ActivityNotification
       @action_cable_with_devise        = false
       @notification_channel_prefix     = 'activity_notification_channel'
       @notification_api_channel_prefix = 'activity_notification_api_channel'
+      @extra_notification_attributes   = []
     end
 
     # Sets ORM name for ActivityNotification (:active_record, :mongoid or :dynamodb)
