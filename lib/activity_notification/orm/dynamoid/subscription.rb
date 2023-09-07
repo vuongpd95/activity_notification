@@ -10,7 +10,7 @@ module ActivityNotification
         include ActiveModel::AttributeAssignment
         include DynamoidExtension
         include Association
-        include SubscriptionApi
+        include SubscriptionAPI
 
         table name: ActivityNotification.config.subscription_table_name, key: :id
 

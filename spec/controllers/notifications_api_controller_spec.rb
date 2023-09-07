@@ -1,6 +1,6 @@
 require 'controllers/notifications_api_controller_shared_examples'
 
-describe ActivityNotification::NotificationsApiController, type: :controller do
+describe ActivityNotification::NotificationsAPIController, type: :controller do
   let(:test_target)        { create(:user) }
   let(:target_type)        { :users }
   let(:typed_target_param) { :user_id }

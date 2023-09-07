@@ -1,7 +1,7 @@
 module ActivityNotification
   module OptionalTarget
     # Optional target implementation to broadcast to Action Cable API channel
-    class ActionCableApiChannel < ActivityNotification::OptionalTarget::Base
+    class ActionCableAPIChannel < ActivityNotification::OptionalTarget::Base
       # Initialize method to prepare Action Cable API channel
       # @param [Hash] options Options for initializing
       # @option options [String] :channel_prefix          (ActivityNotification.config.notification_api_channel_prefix) Channel name prefix to broadcast notifications

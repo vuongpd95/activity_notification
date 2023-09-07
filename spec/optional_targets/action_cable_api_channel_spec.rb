@@ -1,7 +1,7 @@
 if Rails::VERSION::MAJOR >= 5
   require 'activity_notification/optional_targets/action_cable_api_channel'
-  describe ActivityNotification::OptionalTarget::ActionCableApiChannel do
-    let(:test_instance) { ActivityNotification::OptionalTarget::ActionCableApiChannel.new(skip_initializing_target: true) }
+  describe ActivityNotification::OptionalTarget::ActionCableAPIChannel do
+    let(:test_instance) { ActivityNotification::OptionalTarget::ActionCableAPIChannel.new(skip_initializing_target: true) }
 
     describe "as public instance methods" do
       describe "#to_optional_target_name" do

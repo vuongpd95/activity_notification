@@ -1,6 +1,6 @@
 module ActivityNotification
   # Defines API for notification included in Notification model.
-  module NotificationApi
+  module NotificationAPI
     extend ActiveSupport::Concern
 
     included do
@@ -484,6 +484,8 @@ module ActivityNotification
       # Stores notifications to datastore
       # @api private
       def store_notification(target, notifiable, key, options = {})
+        app_notification_attributes = options.slice(*ActivityNotification.config.extra_notification_attributes)
+        options.except!(*app_notification_attributes.keys)
         target_type        = target.to_class_name
         group              = options[:group]              || notifiable.notification_group(target_type, key)
         group_expiry_delay = options[:group_expiry_delay] || notifiable.notification_group_expiry_delay(target_type, key)
@@ -493,7 +495,15 @@ module ActivityNotification
         parameters.merge!(notifiable.notification_parameters(target_type, key))
         group_owner = valid_group_owner(target, notifiable, key, group, group_expiry_delay)
 
-        notification = new({ target: target, notifiable: notifiable, key: key, group: group, parameters: parameters, notifier: notifier, group_owner: group_owner })
+        notification = new(app_notification_attributes.merge!({
+          target: target,
+          notifiable: notifiable,
+          key: key,
+          group: group,
+          parameters: parameters,
+          notifier: notifier,
+          group_owner: group_owner
+        }))
         notification.prepare_to_store.save
         notification
       end

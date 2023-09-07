@@ -1,6 +1,6 @@
 require 'controllers/subscriptions_api_controller_shared_examples'
 
-describe ActivityNotification::SubscriptionsApiController, type: :controller do
+describe ActivityNotification::SubscriptionsAPIController, type: :controller do
   let(:test_target)        { create(:user) }
   let(:target_type)        { :users }
   let(:typed_target_param) { :user_id }

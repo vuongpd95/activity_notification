@@ -2,7 +2,7 @@ require_relative 'controller_spec_utility'
 
 shared_examples_for :subscriptions_api_controller do
   include ActivityNotification::ControllerSpec::RequestUtility
-  include ActivityNotification::ControllerSpec::ApiResponseUtility
+  include ActivityNotification::ControllerSpec::APIResponseUtility
 
   let(:target_params) { { target_type: target_type }.merge(extra_params || {}) }
 
@@ -622,9 +622,9 @@ shared_examples_for :subscriptions_api_request do
     @subscription = create(:subscription, target: test_target, key: "configured_key")
   end
 
-  describe "GET /apidocs to test" do
+  describe "GET /api_docs to test" do
     it "returns API references as OpenAPI Specification JSON schema" do
-      get "#{root_path}/apidocs"
+      get "#{root_path}/api_docs"
       write_schema_file(response.body)
       expect(read_schema_file["openapi"]).to eq("3.0.0")
     end

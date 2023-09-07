@@ -252,8 +252,8 @@ module ActivityNotification
           if options[:action_cable_api_allowed] || (ActivityNotification.config.action_cable_api_enabled && options[:action_cable_api_allowed] != false)
             options[:optional_targets] ||= {}
             require 'activity_notification/optional_targets/action_cable_api_channel'
-            unless options[:optional_targets].has_key?(ActivityNotification::OptionalTarget::ActionCableApiChannel)
-              options[:optional_targets][ActivityNotification::OptionalTarget::ActionCableApiChannel] = {}
+            unless options[:optional_targets].has_key?(ActivityNotification::OptionalTarget::ActionCableAPIChannel)
+              options[:optional_targets][ActivityNotification::OptionalTarget::ActionCableAPIChannel] = {}
             end
           end
         end

@@ -1,10 +1,10 @@
 module ActivityNotification
   # Controller to manage notifications API.
-  class NotificationsApiController < NotificationsController
+  class NotificationsAPIController < NotificationsController
     # Include Swagger API reference
-    include Swagger::NotificationsApi
-    # Include CommonApiController to select target and define common methods
-    include CommonApiController
+    include Swagger::NotificationsAPI
+    # Include CommonAPIController to select target and define common methods
+    include CommonAPIController
     protect_from_forgery except: [:open_all]
     rescue_from ActivityNotification::NotifiableNotFoundError, with: :render_notifiable_not_found
 

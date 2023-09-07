@@ -424,13 +424,13 @@ OpenAPI Specification in [online demo](https://activity-notification-example.her
 
 Public API reference is also hosted in [SwaggerHub](https://swagger.io/tools/swaggerhub/) here: **https://app.swaggerhub.com/apis-docs/simukappu/activity-notification/**
 
-You can also publish OpenAPI Specification in your own application using *[ActivityNotification::ApidocsController](/app/controllers/activity_notification/apidocs_controller.rb)* like this:
+You can also publish OpenAPI Specification in your own application using *[ActivityNotification::ApidocsController](/app/controllers/activity_notification/api_docs_controller.rb)* like this:
 
 ```ruby
 Rails.application.routes.draw do
   scope :api do
     scope :"v2" do
-      resources :apidocs, only: [:index], controller: 'activity_notification/apidocs'
+      resources :api_docs, only: [:index], controller: 'activity_notification/api_docs'
     end
   end
 end

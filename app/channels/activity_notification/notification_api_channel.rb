@@ -1,6 +1,6 @@
 if defined?(ActionCable)
   # Action Cable API channel to subscribe broadcasted notifications.
-  class ActivityNotification::NotificationApiChannel < ActivityNotification::NotificationChannel
+  class ActivityNotification::NotificationAPIChannel < ActivityNotification::NotificationChannel
     # ActionCable::Channel::Base#subscribed
     # @see https://api.rubyonrails.org/classes/ActionCable/Channel/Base.html#method-i-subscribed
     def subscribed

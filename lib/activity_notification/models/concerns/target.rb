@@ -365,8 +365,8 @@ module ActivityNotification
     end
 
     # Generates notifications to this target.
-    # This method calls NotificationApi#notify_to internally with self target instance.
-    # @see NotificationApi#notify_to
+    # This method calls NotificationAPI#notify_to internally with self target instance.
+    # @see NotificationAPI#notify_to
     #
     # @param [Object] notifiable Notifiable instance to notify
     # @param [Hash] options Options for notifications
@@ -386,8 +386,8 @@ module ActivityNotification
     alias_method :receive_notification_now_of, :receive_notification_of
 
     # Generates notifications to this target later by ActiveJob queue.
-    # This method calls NotificationApi#notify_later_to internally with self target instance.
-    # @see NotificationApi#notify_later_to
+    # This method calls NotificationAPI#notify_later_to internally with self target instance.
+    # @see NotificationAPI#notify_later_to
     #
     # @param [Object] notifiable Notifiable instance to notify
     # @param [Hash] options Options for notifications
@@ -406,8 +406,8 @@ module ActivityNotification
     end
 
     # Opens all notifications of this target.
-    # This method calls NotificationApi#open_all_of internally with self target instance.
-    # @see NotificationApi#open_all_of
+    # This method calls NotificationAPI#open_all_of internally with self target instance.
+    # @see NotificationAPI#open_all_of
     #
     # @param [Hash] options Options for opening notifications
     # @option options [DateTime] :opened_at              (Time.current) Time to set to opened_at of the notification record

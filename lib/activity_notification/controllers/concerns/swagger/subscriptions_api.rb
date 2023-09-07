@@ -1,5 +1,5 @@
 module ActivityNotification
-  module Swagger::SubscriptionsApi #:nodoc:
+  module Swagger::SubscriptionsAPI #:nodoc:
     extend ActiveSupport::Concern
     include ::Swagger::Blocks
 

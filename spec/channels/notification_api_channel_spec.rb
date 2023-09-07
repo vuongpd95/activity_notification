@@ -2,7 +2,7 @@ if Rails::VERSION::MAJOR >= 5
   require 'channels/notification_api_channel_shared_examples'
 
   # @See https://github.com/palkan/action-cable-testing
-  describe ActivityNotification::NotificationApiChannel, type: :channel do
+  describe ActivityNotification::NotificationAPIChannel, type: :channel do
     let(:test_target)        { create(:user) }
     let(:target_type)        { "User" }
     let(:typed_target_param) { "user_id" }

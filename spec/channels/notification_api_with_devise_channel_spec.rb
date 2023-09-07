@@ -2,7 +2,7 @@ if Rails::VERSION::MAJOR >= 5
   require 'channels/notification_api_channel_shared_examples'
 
   # @See https://github.com/palkan/action-cable-testing
-  describe ActivityNotification::NotificationApiWithDeviseChannel, type: :channel do
+  describe ActivityNotification::NotificationAPIWithDeviseChannel, type: :channel do
     let(:test_user)            { create(:confirmed_user) }
     let(:unauthenticated_user) { create(:confirmed_user) }
     let(:test_target)          { create(:admin, user: test_user) }

@@ -1,6 +1,6 @@
 module ActivityNotification
   # Defines API for subscription included in Subscription model.
-  module SubscriptionApi
+  module SubscriptionAPI
     extend ActiveSupport::Concern
 
     included do
